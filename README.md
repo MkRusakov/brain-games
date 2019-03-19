@@ -1,1 +1,1 @@
-<a href="https://codeclimate.com/github/Il1ya1/project-lvl1-s462/maintainability"><img src="https://api.codeclimate.com/v1/badges/8a272d1ceb13a75793d2/maintainability" /></a>
+<a href="https://codeclimate.com/github/Il1ya1/project-lvl1-s462/maintainability" target="_blank"><img src="https://api.codeclimate.com/v1/badges/8a272d1ceb13a75793d2/maintainability" /></a>
