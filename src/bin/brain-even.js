@@ -20,7 +20,7 @@ const start = () => {
   const answer = readlineSync.question('Your answer: ');
 
   if (answer === comparison(getNumber)) {
-    count++;
+    count += 1;
     console.log('Correct!');
     if (count === correctAnswer) {
       console.log('Congratulations, Bill!');
