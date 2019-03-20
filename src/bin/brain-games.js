@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { askName, welcome } from '..';
+// eslint-disable-next-line import/newline-after-import
+import { getName, welcome } from '..';
 welcome();
-askName('What is your name? ');
+const userName = getName('What is your name? ');
+console.log(`Hello, ${userName}`);
