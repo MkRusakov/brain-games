@@ -7,4 +7,4 @@ export const getName = (question) => {
   const name = readlineSync.question(question);
   return name;
 };
-export const genarateNumber = () => Math.floor(Math.random() * 100);
+export const genarateNumber = (number = 100) => Math.floor(Math.random() * number);

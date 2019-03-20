@@ -8,3 +8,5 @@
 [![brain-even](https://asciinema.org/a/AhM9O6CvU7onKgX7slabreM5K.svg)](https://asciinema.org/a/AhM9O6CvU7onKgX7slabreM5K)
 
 [![brain-calc](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ.svg)](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ)
+
+[![brain-calc](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT.svg)](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT)
