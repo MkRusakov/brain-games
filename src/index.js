@@ -30,7 +30,7 @@ export const gamePlay = (gameSetting) => {
           return;
         }
       } else {
-        console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        gameSetting.errorMessage(userAnswer);
         console.log(`Let's try again, ${userName}!`);
         return;
       }
