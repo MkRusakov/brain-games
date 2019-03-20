@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { welcome, getName, genarateNumber} from '..';
+import { welcome, getName, genarateNumber } from '..';
 
 let count = 0;
 const correctAnswer = 3;
@@ -13,7 +13,6 @@ console.log(`Hello ${userName}`);
 const comparison = number => ((number % 2 === 0) ? 'yes' : 'no');
 
 const start = () => {
-
   const getNumber = genarateNumber();
   console.log(`Question: ${getNumber}`);
 
