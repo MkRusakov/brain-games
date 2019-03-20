@@ -4,7 +4,6 @@
 <a href="https://travis-ci.org/Il1ya1/project-lvl1-s462">
 	<img src="https://travis-ci.org/Il1ya1/project-lvl1-s462.svg?branch=master" alt="">
 </a>
-<img src="https://yadi.sk/d/APxmHjFxkUZzKg" alt="">
 [![brain-even](https://yadi.sk/d/APxmHjFxkUZzKg)](https://asciinema.org/a/AhM9O6CvU7onKgX7slabreM5K)
 
 [![brain-calc](https://yadi.sk/d/EnM4TvjtbB6peg)](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ)
