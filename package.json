@@ -1,6 +1,6 @@
 {
   "name": "iliya-project-nmnjnk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "brain games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
