@@ -5,7 +5,7 @@ const getOperation = () => {
   const arr = ['+', '-', '*'];
   return arr[Math.floor(Math.random() * arr.length)];
 };
-const calculation = (first, last, sign) =>{
+const calculation = (first, last, sign) => {
   let result;
 
   switch (sign) {
