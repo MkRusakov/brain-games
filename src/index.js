@@ -18,7 +18,7 @@ export const gamePlay = (description, gameSetting) => {
     const limitSteps = 3;
     for (let countSteps = 0; countSteps <= limitSteps;) {
       const gameData = gameSetting();
-      const {questionGame, gameAnswer} = gameData;
+      const { questionGame, gameAnswer } = gameData;
       console.log(`Question: ${questionGame}`);
 
       const userAnswer = readlineSync.question('Your answer: ');
