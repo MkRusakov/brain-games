@@ -8,7 +8,7 @@ export const getName = (question) => {
   return name;
 };
 
-export const gamePlay = (description,gameSetting) => {
+export const gamePlay = (description, gameSetting) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
 
@@ -19,7 +19,7 @@ export const gamePlay = (description,gameSetting) => {
     for (let countSteps = 0; countSteps <= limitSteps;) {
       const gameData = gameSetting();
       console.log(`Question: ${gameData.questionNum}`);
-      
+
       const userAnswer = readlineSync.question('Your answer: ');
       if (userAnswer === gameData.gameAnswer) {
         countSteps += 1;

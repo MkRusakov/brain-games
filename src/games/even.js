@@ -14,7 +14,7 @@ const gameData = () => {
 };
 
 const even = () => {
-  gamePlay(gameDescription,gameData);
+  gamePlay(gameDescription, gameData);
 };
 
 export default even;
