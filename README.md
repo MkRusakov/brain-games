@@ -10,3 +10,5 @@
 [![brain-calc](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ.svg)](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ)
 
 [![brain-calc](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT.svg)](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT)
+
+[![brain-calc](https://asciinema.org/a/YrA6c4C0SEO6r03YkzGp2W6Oj.svg)](https://asciinema.org/a/YrA6c4C0SEO6r03YkzGp2W6Oj)
