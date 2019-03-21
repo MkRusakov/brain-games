@@ -11,7 +11,7 @@
 #### brain-calc
 [![brain-calc](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ.svg)](https://asciinema.org/a/OrwModZYfsLns9fUUgosiEOzZ)
 
-#### brain-calc
+#### brain-gcd
 [![brain-calc](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT.svg)](https://asciinema.org/a/m6lsAHeMlCyZX0nKU1xu3lKBT)
 
 #### brain-progression
