@@ -7,22 +7,21 @@ export const getName = (question) => {
   const name = readlineSync.question(question);
   return name;
 };
-export const genarateNumber = (number = 100) => Math.floor(Math.random() * number);
 
-
-export const gamePlay = (gameSetting) => {
+export const gamePlay = (description,gameSetting) => {
   console.log('Welcome to the Brain Games!');
-  console.log(gameSetting.description);
+  console.log(description);
 
   const userName = getName('May I have your name? ');
   console.log(`Hello ${userName}`);
   const startGame = () => {
     const limitSteps = 3;
     for (let countSteps = 0; countSteps <= limitSteps;) {
-      gameSetting.question();
-
+      const gameData = gameSetting();
+      console.log(`Question: ${gameData.questionNum}`);
+      
       const userAnswer = readlineSync.question('Your answer: ');
-      if (userAnswer === gameSetting.getAnswer()) {
+      if (userAnswer === gameData.gameAnswer) {
         countSteps += 1;
         console.log('Correct!');
         if (countSteps === limitSteps) {
@@ -30,7 +29,7 @@ export const gamePlay = (gameSetting) => {
           return;
         }
       } else {
-        gameSetting.errorMessage(userAnswer);
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.gameAnswer}'.`);
         console.log(`Let's try again, ${userName}!`);
         return;
       }
