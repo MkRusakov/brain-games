@@ -10,7 +10,7 @@ const gameData = () => {
   const gameAnswer = isEven(randomNum) ? 'yes' : 'no';
   const questionNum = randomNum;
 
-  return { gameDescription, questionNum, gameAnswer };
+  return { questionNum, gameAnswer };
 };
 
 const even = () => {

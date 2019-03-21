@@ -1,49 +1,40 @@
-import { gamePlay, genarateNumber } from '..';
+import { gamePlay } from '..';
+import genarateNumber from '../utility';
 
 const getOperation = () => {
   const arr = ['+', '-', '*'];
   return arr[Math.floor(Math.random() * arr.length)];
 };
+const calculation = (first, last, sign) =>{
+  let result;
 
-const calcSetting = {
-  description: 'What is the result of the expression?',
-  answer: null,
-  question() {
-    const first = genarateNumber();
-    const last = genarateNumber();
-    const sign = getOperation();
-
-    console.log(`Question: ${first} ${sign} ${last}`);
-    this.calculation(first, last, sign);
-  },
-  errorMessage(mess) {
-    console.log(`Your answer: ${this.answer}`);
-    console.log(`'${mess}' is wrong answer ;(. Correct answer was '${this.answer}'.`);
-  },
-  calculation(first, last, sign) {
-    let result;
-
-    switch (sign) {
-      case '+':
-        result = first + last;
-        break;
-      case '-':
-        result = first - last;
-        break;
-      default:
-        result = first * last;
-    }
-    this.answer = result;
-  },
-  getAnswer() {
-    return String(this.answer);
-  },
-
+  switch (sign) {
+    case '+':
+      result = first + last;
+      break;
+    case '-':
+      result = first - last;
+      break;
+    default:
+      result = first * last;
+  }
+  return result;
 };
 
+const gameDescription = 'What is the result of the expression?';
+
+const gameData = () => {
+  const first = genarateNumber();
+  const last = genarateNumber();
+  const sign = getOperation();
+
+  const gameAnswer = String(calculation(first, last, sign));
+  const questionNum = `${first} ${sign} ${last}`;
+
+  return { questionNum, gameAnswer };
+};
 
 const calc = () => {
-  console.log('calc.js');
-  gamePlay(calcSetting);
+  gamePlay(gameDescription, gameData);
 };
 export default calc;
