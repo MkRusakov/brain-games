@@ -18,10 +18,11 @@ export const gamePlay = (description, gameSetting) => {
     const limitSteps = 3;
     for (let countSteps = 0; countSteps <= limitSteps;) {
       const gameData = gameSetting();
-      console.log(`Question: ${gameData.questionGame}`);
+      const {questionGame, gameAnswer} = gameData;
+      console.log(`Question: ${questionGame}`);
 
       const userAnswer = readlineSync.question('Your answer: ');
-      if (userAnswer === gameData.gameAnswer) {
+      if (userAnswer === gameAnswer) {
         countSteps += 1;
         console.log('Correct!');
         if (countSteps === limitSteps) {
@@ -29,7 +30,7 @@ export const gamePlay = (description, gameSetting) => {
           return;
         }
       } else {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.gameAnswer}'.`);
+        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameAnswer}'.`);
         console.log(`Let's try again, ${userName}!`);
         return;
       }
