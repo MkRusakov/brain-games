@@ -29,9 +29,9 @@ const gameData = () => {
   const sign = getOperation();
 
   const gameAnswer = String(calculation(first, last, sign));
-  const questionNum = `${first} ${sign} ${last}`;
+  const questionGame = `${first} ${sign} ${last}`;
 
-  return { questionNum, gameAnswer };
+  return { questionGame, gameAnswer };
 };
 
 const calc = () => {

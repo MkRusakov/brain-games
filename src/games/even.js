@@ -8,9 +8,9 @@ const gameDescription = 'Answer "yes" if a number is even, otherwise answer "no"
 const gameData = () => {
   const randomNum = genarateNumber();
   const gameAnswer = isEven(randomNum) ? 'yes' : 'no';
-  const questionNum = randomNum;
+  const questionGame = randomNum;
 
-  return { questionNum, gameAnswer };
+  return { questionGame, gameAnswer };
 };
 
 const even = () => {
