@@ -3,22 +3,22 @@ import genarateNumber from '../utility';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const gameData = () => {
-  const range = genarateNumber(2, 10);
-  const maxNumbers = 10;
+const gameData = () => { 
+  const length = 10;
+  const range = genarateNumber(2, length);
   const progression = [];
   const beginNum = genarateNumber(5, 50);
 
-  for (let count = 0; count < maxNumbers; count += 1) {
+  for (let count = 0; count < length; count += 1) {
     progression.push(beginNum + range * count);
   }
 
-  const selectItem = genarateNumber(0, maxNumbers - 1);
+  const selectItem = genarateNumber(0, length - 1);
   const gameAnswer = String(progression[selectItem]);
 
-  progression[selectItem] = '..';
+  progression[selectItem] = ' .. ';
 
-  const questionGame = `Question: ${progression}`;
+  const questionGame = progression;
 
   return { questionGame, gameAnswer };
 };
