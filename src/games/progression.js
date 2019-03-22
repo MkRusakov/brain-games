@@ -5,20 +5,20 @@ const gameDescription = 'What number is missing in the progression?';
 
 const gameData = () => {
   const range = genarateNumber(2, 10);
-  const progressionLength = 10;
-  let beginNum = genarateNumber(5, 50);
+  const maxNumbers = 10;
+  const progression = [];
+  const beginNum = genarateNumber(5, 50);
 
-  const arr = [];
-
-  for (let count = 0; count < progressionLength; count += 1) {
-    beginNum += range;
-    arr.push(beginNum);
+  for (let count = 0; count < maxNumbers; count += 1) {
+    progression.push(beginNum + range * count);
   }
 
-  const gameAnswer = String(arr[genarateNumber(0, arr.length - 1)]);
-  const index = arr.indexOf(parseInt(gameAnswer, 10));
-  arr[index] = '..';
-  const questionGame = `Question: ${arr}`;
+  const selectItem = genarateNumber(0, maxNumbers - 1);
+  const gameAnswer = String(progression[selectItem]);
+
+  progression[selectItem] = '..';
+
+  const questionGame = `Question: ${progression}`;
 
   return { questionGame, gameAnswer };
 };

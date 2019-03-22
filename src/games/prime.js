@@ -16,7 +16,7 @@ const isPrime = (number) => {
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameData = () => {
-  const questionGame = genarateNumber(0, 499);
+  const questionGame = genarateNumber(2, 499);
   const gameAnswer = isPrime(questionGame) ? 'yes' : 'no';
 
 
