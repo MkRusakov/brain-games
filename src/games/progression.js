@@ -3,7 +3,7 @@ import genarateNumber from '../utility';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const gameData = () => { 
+const gameData = () => {
   const length = 10;
   const range = genarateNumber(2, length);
   const progression = [];
