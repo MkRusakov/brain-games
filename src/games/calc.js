@@ -1,40 +1,32 @@
-import gamePlay from '..';
+import playGame from '..';
 import genarateNumber from '../utility';
 
-const getOperation = () => {
-  const arr = ['+', '-', '*'];
-  return arr[Math.floor(Math.random() * arr.length)];
-};
+const operators = ['+', '-', '*'];
 const calculation = (first, last, sign) => {
-  let result;
-
   switch (sign) {
     case '+':
-      result = first + last;
-      break;
+      return first + last;
     case '-':
-      result = first - last;
-      break;
+      return first - last;
     default:
-      result = first * last;
+      return first * last;
   }
-  return result;
 };
 
 const gameDescription = 'What is the result of the expression?';
 
-const gameData = () => {
+const getGameData = () => {
   const first = genarateNumber();
   const last = genarateNumber();
-  const sign = getOperation();
+  const sign = operators[genarateNumber(0, operators.length)];
 
-  const gameAnswer = String(calculation(first, last, sign));
-  const questionGame = `${first} ${sign} ${last}`;
+  const correctAnswer = String(calculation(first, last, sign));
+  const question = `${first} ${sign} ${last}`;
 
-  return { questionGame, gameAnswer };
+  return { question, correctAnswer };
 };
 
 const calc = () => {
-  gamePlay(gameDescription, gameData);
+  playGame(gameDescription, getGameData);
 };
 export default calc;

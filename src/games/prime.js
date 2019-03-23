@@ -1,4 +1,4 @@
-import gamePlay from '..';
+import playGame from '..';
 import genarateNumber from '../utility';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -12,13 +12,13 @@ const isPrime = (number) => {
   return number > 1;
 };
 
-const gameData = () => {
-  const questionGame = genarateNumber(2, 499);
-  const gameAnswer = isPrime(questionGame) ? 'yes' : 'no';
+const getGameData = () => {
+  const question = genarateNumber(2, 499);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-  return { questionGame, gameAnswer };
+  return { question, correctAnswer };
 };
 
 export default () => {
-  gamePlay(gameDescription, gameData);
+  playGame(gameDescription, getGameData);
 };

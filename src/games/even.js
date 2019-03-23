@@ -1,20 +1,17 @@
-import gamePlay from '..';
+import playGame from '..';
 import genarateNumber from '../utility';
 
 const isEven = number => number % 2 === 0;
 
 const gameDescription = 'Answer "yes" if a number is even, otherwise answer "no".';
 
-const gameData = () => {
-  const randomNum = genarateNumber();
-  const gameAnswer = isEven(randomNum) ? 'yes' : 'no';
-  const questionGame = randomNum;
+const getGameData = () => {
+  const question = genarateNumber();
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
-  return { questionGame, gameAnswer };
+  return { question, correctAnswer };
 };
 
-const even = () => {
-  gamePlay(gameDescription, gameData);
+export default () => {
+  playGame(gameDescription, getGameData);
 };
-
-export default even;

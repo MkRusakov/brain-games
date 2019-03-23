@@ -1,9 +1,9 @@
-import gamePlay from '..';
+import playGame from '..';
 import genarateNumber from '../utility';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const gameData = () => {
+const getGameData = () => {
   const length = 10;
   const range = genarateNumber(2, length);
   const progression = [];
@@ -14,16 +14,16 @@ const gameData = () => {
   }
 
   const hiddenNumIndex = genarateNumber(0, length - 1);
-  const gameAnswer = progression[hiddenNumIndex].toString();
+  const correctAnswer = progression[hiddenNumIndex].toString();
 
   progression[hiddenNumIndex] = ' .. ';
 
-  const questionGame = progression.join(' ');
+  const question = progression.join(' ');
 
-  return { questionGame, gameAnswer };
+  return { question, correctAnswer };
 };
 
 const progression = () => {
-  gamePlay(gameDescription, gameData);
+  playGame(gameDescription, getGameData);
 };
 export default progression;

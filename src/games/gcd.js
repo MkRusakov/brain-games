@@ -1,19 +1,19 @@
-import gamePlay from '..';
+import playGame from '..';
 import genarateNumber from '../utility';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const getGreatestCommonFactor = (a, b) => (a % b === 0 ? b : getGreatestCommonFactor(b, a % b));
-const gameData = () => {
+const getGameData = () => {
   const x = genarateNumber(1, 50);
   const y = genarateNumber(1, 50);
 
-  const gameAnswer = String(getGreatestCommonFactor(x, y));
-  const questionGame = `Question: ${x} ${y}`;
+  const correctAnswer = String(getGreatestCommonFactor(x, y));
+  const question = `${x} ${y}`;
 
-  return { questionGame, gameAnswer };
+  return { question, correctAnswer };
 };
 
 const gcd = () => {
-  gamePlay(gameDescription, gameData);
+  playGame(gameDescription, getGameData);
 };
 export default gcd;
