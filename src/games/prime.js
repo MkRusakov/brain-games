@@ -1,19 +1,16 @@
-import { gamePlay } from '..';
+import gamePlay from '..';
 import genarateNumber from '../utility';
 
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (number) => {
-  if (number < 2) {
-    return false;
-  }
-  for (let count = 2; count < Math.sqrt(number); count += 1) {
+  for (let count = 2; count <= Math.sqrt(number); count += 1) {
     if (number % count === 0) {
       return false;
     }
   }
-  return true;
+  return number > 1;
 };
-
-const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameData = () => {
   const questionGame = genarateNumber(2, 499);
@@ -22,8 +19,6 @@ const gameData = () => {
   return { questionGame, gameAnswer };
 };
 
-const prime = () => {
+export default () => {
   gamePlay(gameDescription, gameData);
 };
-
-export default prime;

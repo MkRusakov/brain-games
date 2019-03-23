@@ -1,4 +1,4 @@
-import { gamePlay } from '..';
+import gamePlay from '..';
 import genarateNumber from '../utility';
 
 const gameDescription = 'What number is missing in the progression?';
@@ -7,18 +7,18 @@ const gameData = () => {
   const length = 10;
   const range = genarateNumber(2, length);
   const progression = [];
-  const beginNum = genarateNumber(5, 50);
+  const begin = genarateNumber(5, 50);
 
   for (let count = 0; count < length; count += 1) {
-    progression.push(beginNum + range * count);
+    progression.push(begin + range * count);
   }
 
-  const selectItem = genarateNumber(0, length - 1);
-  const gameAnswer = String(progression[selectItem]);
+  const hiddenNumIndex = genarateNumber(0, length - 1);
+  const gameAnswer = String(progression[hiddenNumIndex]);
 
-  progression[selectItem] = ' .. ';
+  progression[hiddenNumIndex] = ' .. ';
 
-  const questionGame = progression;
+  const questionGame = progression.join(' ');
 
   return { questionGame, gameAnswer };
 };

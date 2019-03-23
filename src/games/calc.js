@@ -1,4 +1,4 @@
-import { gamePlay } from '..';
+import gamePlay from '..';
 import genarateNumber from '../utility';
 
 const getOperation = () => {
