@@ -14,7 +14,7 @@ const gameData = () => {
   }
 
   const hiddenNumIndex = genarateNumber(0, length - 1);
-  const gameAnswer = String(progression[hiddenNumIndex]);
+  const gameAnswer = progression[hiddenNumIndex].toString();
 
   progression[hiddenNumIndex] = ' .. ';
 
