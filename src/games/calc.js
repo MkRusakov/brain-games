@@ -26,7 +26,6 @@ const getGameData = () => {
   return { question, correctAnswer };
 };
 
-const calc = () => {
+export default () => {
   playGame(gameDescription, getGameData);
 };
-export default calc;

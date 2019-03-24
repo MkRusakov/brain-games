@@ -13,7 +13,6 @@ const getGameData = () => {
   return { question, correctAnswer };
 };
 
-const gcd = () => {
+export default () => {
   playGame(gameDescription, getGameData);
 };
-export default gcd;

@@ -5,12 +5,12 @@ const gameDescription = 'What number is missing in the progression?';
 
 const getGameData = () => {
   const length = 10;
-  const range = genarateNumber(2, length);
+  const range = genarateNumber(2, 10);
   const progression = [];
   const begin = genarateNumber(5, 50);
 
-  for (let count = 0; count < length; count += 1) {
-    progression.push(begin + range * count);
+  for (let i = 0; i < length; i += 1) {
+    progression.push(begin + range * i);
   }
 
   const hiddenNumIndex = genarateNumber(0, length - 1);
@@ -23,7 +23,6 @@ const getGameData = () => {
   return { question, correctAnswer };
 };
 
-const progression = () => {
+export default () => {
   playGame(gameDescription, getGameData);
 };
-export default progression;
